@@ -44,5 +44,11 @@
     <Compile Include="Syncronizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Syncronizer.Common\Syncronizer.Common.csproj">
+      <Project>{68DCEE2A-2975-424A-82B5-AE50B96572D5}</Project>
+      <Name>Syncronizer.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

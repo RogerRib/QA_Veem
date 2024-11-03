@@ -3,9 +3,9 @@ using System.IO;
 
 namespace Syncronizer.Common
 {
-    internal class LogInfomation
+    public class LogInfomation
     {
-        public enum LogLevel { Debug, Info, Warning, None }
+        public enum LogLevel { Debug, Info, Warning, Error, None }
 
         private readonly string logFilePath;
         private readonly string logFileName = "log.log";
@@ -22,6 +22,9 @@ namespace Syncronizer.Common
             {
                 case LogLevel.Debug:
                     Console.ForegroundColor = ConsoleColor.Blue;
+                    break;
+                case LogLevel.Error:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     break;
                 case LogLevel.Warning:
                     Console.ForegroundColor = ConsoleColor.Yellow;
