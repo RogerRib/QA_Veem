@@ -1,0 +1,35 @@
+# Ignore build output directories
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore Visual Studio specific files
+.vs/
+
+# Ignore package directories
+packages/
+*.nupkg
+project.lock.json
+
+# Rider specific files
+.idea/
+*.sln.iml
+
+# Dotnet artifacts
+*.dll
+*.exe
+*.app
+*.db
+*.pidb
+*.mdb
+*.pdb
+*.cache
+*.ilk
+*.log
+*.tmp
+*.csproj.user

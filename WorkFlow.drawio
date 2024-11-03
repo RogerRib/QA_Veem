@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.7.6">
+  <diagram name="Página-1" id="BHhdUPnvaXJ96zzM4VX8">
+    <mxGraphModel dx="2314" dy="2275" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-2" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-5" value="Source folder" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="195" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-7" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="NTmGDkyBu4niNywY9Ls7-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="330" as="sourcePoint" />
+            <mxPoint x="210" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-8" value="File" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="190" y="195" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-10" value="FileAction" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="350" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-11" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="209.5" y="430" as="sourcePoint" />
+            <mxPoint x="209.5" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-12" value="File manipulated" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-13" value="Replica folder" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="555" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="NTmGDkyBu4niNywY9Ls7-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="590" as="sourcePoint" />
+            <mxPoint x="320" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-15" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="320" y="-30" width="840" height="840" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-20" value="Copy process" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="690" y="-80" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-24" value="Get last operation to arrive" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-26" value="Verify if path exists after execute operation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="290" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-27" value="Execute operation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="405" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-28" value="Create queu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="665" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-29" value="Log infomration" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="305" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-30" value="Log infomration" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="420" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-31" value="Log infomration" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="525" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NTmGDkyBu4niNywY9Ls7-32" value="Verify if file is on destination folder or not" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="510" width="170" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
