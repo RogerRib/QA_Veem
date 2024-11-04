@@ -50,9 +50,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Syncronizer.Common\Syncronizer.Common.csproj">
-      <Project>{68dcee2a-2975-424a-82b5-ae50b96572d5}</Project>
-      <Name>Syncronizer.Common</Name>
+    <ProjectReference Include="..\Syncronizer.Common\Syncronizer.Logger.csproj">
+      <Project>{68DCEE2A-2975-424A-82B5-AE50B96572D5}</Project>
+      <Name>Syncronizer.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syncronizer.Monitor\Syncronizer.Monitor.csproj">
+      <Project>{8aa2b652-39d7-4b03-9677-7ab8230f6a5c}</Project>
+      <Name>Syncronizer.Monitor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

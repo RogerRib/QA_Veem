@@ -1,22 +1,57 @@
 ﻿using Syncronizer.Common;
 using System;
 using System.IO;
+using System.Timers;
 
 namespace Syncronizer.Monitor
 {
     public class Syncronizer
     {
         private FileSystemWatcher _watcher = null;
-        LogInfomation _logInfomation = null;
+        private LogInfomation _logInfomation = null;
+        private Timer _monitoringTimer;
         private readonly string _sourceFolderPath = string.Empty;
         private readonly string _replicaFolderPath = string.Empty;
+        private int _monitoringInterval = 5000;
 
-        public Syncronizer(string souceFolderPath, string replicaFolderPath)
+        public Syncronizer(string souceFolderPath, string replicaFolderPath, LogInfomation logInfomation = null, int monitoringInterval = 5000)
         {
+            _logInfomation = logInfomation ?? new LogInfomation();
+            _monitoringInterval = monitoringInterval;
+
+            if (!Directory.Exists(souceFolderPath))
+            {
+                _logInfomation.Log($"Directory {souceFolderPath} not exists", LogInfomation.LogLevel.Warning);
+                _logInfomation.Log($"Creating derectory {souceFolderPath}");
+
+                try
+                {
+                    Directory.CreateDirectory(souceFolderPath);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+
+            if (!Directory.Exists(replicaFolderPath))
+            {
+                _logInfomation.Log($"Directory {replicaFolderPath} not exists", LogInfomation.LogLevel.Warning);
+                _logInfomation.Log($"Creating derectory {replicaFolderPath}");
+
+                try
+                {
+                    Directory.CreateDirectory(replicaFolderPath);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+
             _sourceFolderPath = souceFolderPath;
             _replicaFolderPath = replicaFolderPath;
 
-            _logInfomation = new LogInfomation();
             _logInfomation.Log($"Source folder path setted to:{_sourceFolderPath}");
             _logInfomation.Log($"Replica folder path setted to:{_replicaFolderPath}");
 
@@ -31,15 +66,34 @@ namespace Syncronizer.Monitor
             _watcher.Error += OnError;
 
             // Setting up events
-            _watcher.IncludeSubdirectories = true; 
-            _watcher.EnableRaisingEvents = true;
+            _watcher.IncludeSubdirectories = true;             
+
+            _monitoringTimer = new Timer(_monitoringInterval);
+            _monitoringTimer.Elapsed += OnTimerElapsed;
+            _monitoringTimer.AutoReset = true;
+
             _logInfomation.Log($"Monitor start");
+            _monitoringTimer.Start();
+        }
+
+        private void OnTimerElapsed(object sender, ElapsedEventArgs e)
+        {
+            // Temporarily stop monitoring
+            _watcher.EnableRaisingEvents = false;
+
+            // Re-enable after a delay
+            System.Threading.Thread.Sleep(500); 
+            _watcher.EnableRaisingEvents = true;
+
         }
 
         public void StopWatcher()
         {
+            _logInfomation.Log($"Syncronization will be stopped between source {_sourceFolderPath} and replicata folder {_replicaFolderPath}");
             _watcher.EnableRaisingEvents = false;
             _watcher.Dispose();
+            _logInfomation.Log($"Syncronization stop between source {_sourceFolderPath} and replicata folder {_replicaFolderPath}");
+
         }
 
         private void OnError(object sender, ErrorEventArgs e)

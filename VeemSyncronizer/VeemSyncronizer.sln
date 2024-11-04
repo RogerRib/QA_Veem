@@ -5,7 +5,7 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syncronizer", "Syncronizer\Syncronizer.csproj", "{7DBCB144-3E4B-44BF-B8D2-BA35F795B0BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syncronizer.Common", "Syncronizer.Common\Syncronizer.Common.csproj", "{68DCEE2A-2975-424A-82B5-AE50B96572D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syncronizer.Logger", "Syncronizer.Common\Syncronizer.Logger.csproj", "{68DCEE2A-2975-424A-82B5-AE50B96572D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syncronizer.Monitor", "Syncronizer.Monitor\Syncronizer.Monitor.csproj", "{8AA2B652-39D7-4B03-9677-7AB8230F6A5C}"
 EndProject
