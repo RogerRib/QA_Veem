@@ -27,6 +27,6 @@ perfectly acceptable to use a third-party (or built-in) library;
 - Souce and replica folder's path will be asked when console application startup. If replica folder does not exists console application will create it 
 - All the information will always be available such as source path, replica path, and logs;
 - Log structure will be
-   `< operation >, < Name >, < Type of object >, < Date time start >, < Date time end>, < Memory space >, < Happy Ending  > `
+   `<date>, <log level>, <message>`
 
 
